@@ -1,6 +1,9 @@
 # If you prefer the allow list template instead of the deny list, see community template:
 # https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
+
+# ============================================
+# Go
+# ============================================
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -16,17 +19,157 @@
 coverage.*
 *.coverprofile
 profile.cov
+*.html
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Dependency directories
+vendor/
 
 # Go workspace file
 go.work
 go.work.sum
 
-# env file
-.env
+# Build directories
+build/
+bin/
+dist/
 
+# ============================================
+# Environment & Configuration
+# ============================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
+
+# ============================================
+# Solana & Anchor
+# ============================================
+solana-program/target/
+solana-program/.anchor/
+solana-program/test-ledger/
+.anchor/
+test-ledger/
+*.so
+keypairs/
+*.json.bak
+
+# ============================================
+# Node.js & Frontend
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.yarn
+.pnp
+.pnp.js
+
+# Frontend build
+frontend/build/
+frontend/dist/
+frontend/.next/
+frontend/out/
+frontend/.cache/
+
+# ============================================
+# Logs
+# ============================================
+*.log
+logs/
+*.log.*
+log/
+
+# ============================================
 # Editor/IDE
-# .idea/
-# .vscode/
+# ============================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# Database
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+data/
+postgres_data/
+
+# ============================================
+# Docker
+# ============================================
+.docker/
+docker-compose.override.yml
+
+# ============================================
+# Temporary Files
+# ============================================
+tmp/
+temp/
+*.tmp
+.cache/
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============================================
+# Uploads & Generated Files
+# ============================================
+uploads/
+static/uploads/
+public/uploads/
+
+# ============================================
+# Documentation (generated)
+# ============================================
+docs/swagger/
+
+# ============================================
+# Testing
+# ============================================
+.nyc_output/
+coverage/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# ============================================
+# Monitoring & Metrics
+# ============================================
+prometheus_data/
+grafana_data/
+
+# ============================================
+# Miscellaneous
+# ============================================
+.air.toml
+.goreleaser.yml
+*.bak
+*.orig
